@@ -4,31 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XcelCoin Presale</title>
-    <link rel="stylesheet" href="style.css"><script src="https://cdn.jsdelivr.net/npm/@solana/web3.js@1.75.0"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>XcelCoin Presale</h1>
-            <button id="connectWallet">Connect Wallet</button>
-        </header>
-        
-        <section class="presale">
-            <h2>Buy XcelCoin Now!</h2>
-            <p>1 XcelCoin = 0.01 SOL</p>
-            <input type="number" id="amount" placeholder="Enter amount">
-            <button id="buyToken">Buy XcelCoin</button>
-        </section>
-        
-        <section class="roadmap">
-            <h2>Roadmap</h2>
-            <p>Phase 1: Token Launch</p>
-            <p>Phase 2: Presale & Marketing</p>
-            <p>Phase 3: CEX Listings</p>
-            <p>Phase 4: Global Adoption</p>
-        </section>
-    </div>
+    <header>
+        <h1>XcelCoin Presale</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#presale">Presale</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     
-    <script src="script.js"></script>
+    <section id="hero">
+        <h2>Join the Future of Crypto with XcelCoin</h2>
+        <p>Get in early and be part of something revolutionary.</p>
+        <a href="#presale" class="btn">Buy XcelCoin Now</a>
+    </section>
+    
+    <section id="presale">
+        <h2>Presale Details</h2>
+        <p>Limited-time offer! Secure your XcelCoin at the best price.</p>
+        <button id="buy-now">Buy Now</button>
+    </section>
+    
+    <section id="roadmap">
+        <h2>Our Roadmap</h2>
+        <p>Exciting milestones ahead for XcelCoin.</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 XcelCoin. All rights reserved.</p>
+    </footer>
 </body>
 </html>

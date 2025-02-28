@@ -3,31 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XcelCoin - The Future of Crypto</title>
+    <title>XcelCoin Presale</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
 </head>
 <body>
-    <header>
-        <h1>XcelCoin</h1>
-        <p>The Future of Decentralized Finance</p>
-        <a href="#presale" class="btn">Join Presale</a>
-    </header>
-    
-    <section id="about">
-        <h2>Why XcelCoin?</h2>
-        <p>XcelCoin is the next-generation cryptocurrency, designed for speed, security, and scalability.</p>
-    </section>
-    
-    <section id="presale">
-        <h2>Presale is Live!</h2>
-        <p>Get XcelCoin at a discounted rate before the official launch.</p>
-        <p><strong>Price: 1 XcelCoin = 0.01 SOL</strong></p>
-        <button id="buyBtn">Buy Now</button>
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 XcelCoin. All rights reserved.</p>
-    </footer>
+    <div class="container">
+        <header>
+            <h1>XcelCoin Presale</h1>
+            <button id="connectWallet">Connect Wallet</button>
+        </header>
+        
+        <section class="presale">
+            <h2>Buy XcelCoin Now!</h2>
+            <p>1 XcelCoin = 0.01 SOL</p>
+            <input type="number" id="amount" placeholder="Enter amount">
+            <button id="buyToken">Buy XcelCoin</button>
+        </section>
+        
+        <section class="roadmap">
+            <h2>Roadmap</h2>
+            <p>Phase 1: Token Launch</p>
+            <p>Phase 2: Presale & Marketing</p>
+            <p>Phase 3: CEX Listings</p>
+            <p>Phase 4: Global Adoption</p>
+        </section>
+    </div>
     
     <script src="script.js"></script>
 </body>

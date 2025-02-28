@@ -56,3 +56,6 @@ async function sendSolanaPayment() {
         console.error("Transaction failed", err);
     }
 }
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("XcelCoin website loaded successfully!");
+});

@@ -1,3 +1,3 @@
-document.getElementById("buy-button").addEventListener("click", function() {
-    alert("Presale coming soon! Stay tuned.");
+document.getElementById("buyBtn").addEventListener("click", function() {
+    alert("Presale purchase feature coming soon!");
 });

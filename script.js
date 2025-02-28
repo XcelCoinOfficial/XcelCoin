@@ -49,3 +49,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+if (!window.solana) {
+    alert("Solana cüzdanı bulunamadı! Lütfen Phantom cüzdanınızı yükleyin.");
+}

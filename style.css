@@ -1,32 +1,5 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-header {
-    background-color: #007bff;
-    color: white;
-    padding: 20px;
-}
-
-section {
-    margin: 20px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-footer {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-}
-body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -53,14 +26,6 @@ header {
     margin-top: 20px;
     text-decoration: none;
     border-radius: 5px;
-}
-
-section {
-    background: white;
-    margin: 20px 0;
-    padding: 40px 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 footer {

@@ -4,49 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XcelCoin Pre-Sale</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-
-    <!-- Navigasyon Menüsü -->
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#presale">Pre-Sale</a></li>
-            <li><a href="#wallet">Wallet</a></li>
-        </ul>
-    </nav>
-
-    <!-- Ana Başlık -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#presale">Pre-Sale</a></li>
+                <li><a href="#wallet">Wallet</a></li>
+            </ul>
+        </nav>
+    </header>
+    
     <section id="home" class="hero">
         <h1>XcelCoin Pre-Sale</h1>
-        <h2>Join the Future of Crypto</h2>
-        <p>Pre-Sale starts in:</p>
-        <div id="countdown">Loading...</div>
+        <p>Join the Future of Crypto</p>
+        <div id="countdown">00:00:00</div>
         <button id="connect-wallet">Connect Wallet</button>
     </section>
-
-    <!-- Pre-Sale Detayları -->
+    
     <section id="presale">
         <h2>Pre-Sale Details</h2>
         <p>Be part of the exclusive pre-sale of XcelCoin and invest in the future.</p>
-        <h3>Token Price</h3>
-        <p>1 XCL = 0.001 SOL</p>
-        <h3>Available Supply</h3>
-        <p>10,000,000 XCL</p>
-
-        <!-- Satış ilerleme çubuğu -->
-        <div id="progress-bar-container">
-            <div id="progress-bar"></div>
+        <div class="details">
+            <p><strong>Token Price:</strong> 1 XCL = 0.001 SOL</p>
+            <p><strong>Available Supply:</strong> 10,000,000 XCL</p>
         </div>
-        <p id="progress-text">Progress: 40% Sold</p>
     </section>
-
+    
     <footer>
-        <p>© 2025 XcelCoin. All Rights Reserved.</p>
+        <p>&copy; 2025 XcelCoin. All Rights Reserved.</p>
     </footer>
-
 </body>
 </html>

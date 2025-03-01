@@ -1,42 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XcelCoin Pre-Sale</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <title>XcelCoin Ön Satışı</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#presale">Pre-Sale</a></li>
-                <li><a href="#wallet">Wallet</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="home" class="hero">
-        <h1>XcelCoin Pre-Sale</h1>
-        <p>Join the Future of Crypto</p>
-        <div id="countdown">00:00:00</div>
-        <button id="connect-wallet">Connect Wallet</button>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#home">Ev</a>
+        <a href="#about">Hakkında</a>
+        <a href="#presale">Ön Satış</a>
+        <a href="#wallet">Cüzdan</a>
+    </nav>
+
+    <!-- Ana Bölüm -->
+    <section class="hero" id="home">
+        <h1>XcelCoin Ön Satışı</h1>
+        <p>Kripto'nun Geleceğine Katılın</p>
+        <div class="countdown" id="countdown">Yükleniyor...</div>
+        <button class="wallet-button" onclick="connectWallet()">Cüzdanı Bağla</button>
     </section>
-    
-    <section id="presale">
-        <h2>Pre-Sale Details</h2>
-        <p>Be part of the exclusive pre-sale of XcelCoin and invest in the future.</p>
-        <div class="details">
-            <p><strong>Token Price:</strong> 1 XCL = 0.001 SOL</p>
-            <p><strong>Available Supply:</strong> 10,000,000 XCL</p>
-        </div>
+
+    <!-- Ön Satış Detayları -->
+    <section class="presale-info" id="presale">
+        <h2>Ön Satış Detayları</h2>
+        <p>XcelCoin'in özel ön satışına katılın ve geleceğe yatırım yapın.</p>
+        <p><strong>Jeton Fiyatı</strong><br>1 XCL = 0,001 SOL</p>
+        <p><strong>Mevcut Tedarik</strong><br>10.000.000 XCL</p>
     </section>
-    
-    <footer>
-        <p>&copy; 2025 XcelCoin. All Rights Reserved.</p>
-    </footer>
+
+    <script src="script.js"></script>
+
 </body>
 </html>

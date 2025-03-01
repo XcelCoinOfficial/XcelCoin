@@ -1,94 +1,103 @@
 /* Genel Stil */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #111;
-    color: white;
+    color: #fff;
+    margin: 0;
+    padding: 0;
     text-align: center;
-    margin: 0;
-    padding: 0;
 }
 
-/* Navigasyon */
-nav {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 15px 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 100;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+/* Navbar */
+.navbar {
     display: flex;
     justify-content: center;
+    background: #000;
+    padding: 15px;
 }
 
-nav ul li {
-    margin: 0 20px;
-}
-
-nav ul li a {
+.navbar a {
+    color: #fff;
     text-decoration: none;
-    color: #ffffff;
-    font-size: 1rem;
+    margin: 0 15px;
+    font-size: 18px;
     transition: 0.3s;
 }
 
-nav ul li a:hover {
-    color: #00ff99;
+.navbar a:hover {
+    color: #00ccff;
 }
 
-/* Hero Bölümü */
+/* Ana Bölüm */
 .hero {
-    padding: 150px 20px 50px;
-    background: #222;
+    padding: 100px 20px;
+    text-align: center;
 }
 
-/* Pre-Sale Bölümü */
-#presale {
-    margin: 50px auto;
-    padding: 20px;
+.hero h1 {
+    font-size: 40px;
+    font-weight: bold;
 }
 
-/* İlerleme Çubuğu */
-#progress-bar-container {
-    width: 100%;
-    max-width: 500px;
-    background: #222;
-    border-radius: 10px;
-    overflow: hidden;
-    margin: 20px auto;
-    height: 20px;
+.hero p {
+    font-size: 20px;
+    opacity: 0.8;
 }
 
-#progress-bar {
-    width: 40%;
-    height: 100%;
-    background: #00ff99;
-    transition: 0.5s;
+/* Sayaç */
+.countdown {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 20px 0;
 }
 
-/* Buton */
-button {
-    background: #00ff99;
-    color: black;
+/* Cüzdan Bağlama Butonu */
+.wallet-button {
+    background: #00ccff;
+    color: #111;
+    padding: 15px 30px;
     border: none;
-    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
-    font-size: 1rem;
-    border-radius: 5px;
+    transition: 0.3s;
 }
 
-button:hover {
-    background: #00cc77;
+.wallet-button:hover {
+    background: #0099cc;
 }
 
-/* Footer */
-footer {
-    margin-top: 50px;
-    padding: 20px;
-    background: #000;
+/* Ön Satış Detayları */
+.presale-info {
+    background: #222;
+    padding: 50px 20px;
+    margin-top: 40px;
+    border-radius: 12px;
+}
+
+.presale-info h2 {
+    font-size: 28px;
+    color: #00ccff;
+}
+
+.presale-info p {
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p, .countdown {
+        font-size: 18px;
+    }
+
+    .wallet-button {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
 }

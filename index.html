@@ -3,36 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XcelCoin Ön Satışı</title>
+    <title>XcelCoin Ön Satış</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
+    <header>
+        <h1>XcelCoin Ön Satış</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Ev</a></li>
+                <li><a href="#about">Hakkında</a></li>
+                <li><a href="#presale">Ön Satış</a></li>
+                <li><a href="#wallet">Cüzdan</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <a href="#home">Ev</a>
-        <a href="#about">Hakkında</a>
-        <a href="#presale">Ön Satış</a>
-        <a href="#wallet">Cüzdan</a>
-    </nav>
-
-    <!-- Ana Bölüm -->
-    <section class="hero" id="home">
-        <h1>XcelCoin Ön Satışı</h1>
-        <p>Kripto'nun Geleceğine Katılın</p>
-        <div class="countdown" id="countdown">Yükleniyor...</div>
-        <button class="wallet-button" onclick="connectWallet()">Cüzdanı Bağla</button>
+    <section id="presale">
+        <div class="container">
+            <h2>Kripto'nun Geleceğine Katılın</h2>
+            <div id="countdown">Ön satış başlıyor...</div>
+            <button id="connectWallet">Cüzdanı Bağla</button>
+        </div>
     </section>
 
-    <!-- Ön Satış Detayları -->
-    <section class="presale-info" id="presale">
-        <h2>Ön Satış Detayları</h2>
+    <section id="details">
+        <h3>Ön Satış Detayları</h3>
         <p>XcelCoin'in özel ön satışına katılın ve geleceğe yatırım yapın.</p>
-        <p><strong>Jeton Fiyatı</strong><br>1 XCL = 0,001 SOL</p>
-        <p><strong>Mevcut Tedarik</strong><br>10.000.000 XCL</p>
+        <ul>
+            <li><strong>Jeton Fiyatı:</strong> 1 XCL = 0,001 SOL</li>
+            <li><strong>Mevcut Tedarik:</strong> 10.000.000 XCL</li>
+        </ul>
     </section>
-
-    <script src="script.js"></script>
-
 </body>
 </html>

@@ -6,46 +6,66 @@
   <title>XcelCoin Tokenomics</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .tokenomics-section {
+      background: #f1f1f1;
+      padding: 4rem 1rem;
+    }
+    .tokenomics-card {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+    .tokenomics-card h4 {
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    .tokenomics-img {
+      max-width: 100%;
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+    }
+  </style>
 </head>
 <body>
 
-  <section class="py-5 text-center bg-info-subtle">
-    <div class="container">
-      <h2 class="mb-4">📊 XcelCoin Tokenomics</h2>
-      <p class="lead mb-5">A fair and sustainable token distribution designed for long-term success.</p>
+<section class="tokenomics-section text-center">
+  <div class="container">
+    <h2 class="mb-4">📊 XcelCoin Tokenomics</h2>
+    <p class="lead mb-5">Here’s how XcelCoin is structured for sustainability and growth.</p>
 
-      <div class="row align-items-center">
-        <div class="col-md-6 mb-4">
-          <img src="tokenomics.png" alt="Tokenomics Chart" class="img-fluid rounded-4 shadow">
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <div class="tokenomics-card">
+          <img src="tokenomics.png" alt="Tokenomics Chart" class="tokenomics-img">
+          <h4>Token Allocation:</h4>
+          <ul class="list-group text-start">
+            <li class="list-group-item">🚀 40% - Pre-Sale</li>
+            <li class="list-group-item">💼 20% - Team & Development</li>
+            <li class="list-group-item">🎯 15% - Marketing</li>
+            <li class="list-group-item">🌍 10% - Community Rewards</li>
+            <li class="list-group-item">🔒 10% - Liquidity Pool</li>
+            <li class="list-group-item">📈 5% - Future Exchange Listings</li>
+          </ul>
+
+          <h4 class="mt-4">Supply Details:</h4>
+          <ul class="list-group text-start">
+            <li class="list-group-item">🪙 Total Supply: 1,000,000,000 XCL</li>
+            <li class="list-group-item">🛒 Pre-Sale Price: $0.002 per XCL</li>
+            <li class="list-group-item">📅 Launch Date: April 2025</li>
+            <li class="list-group-item">🔗 Blockchain: Solana</li>
+          </ul>
         </div>
-
-        <div class="col-md-6 text-start">
-          <div class="card p-4 border-0 shadow rounded-4 bg-white">
-            <h4 class="mb-3">Supply Distribution</h4>
-            <ul class="list-unstyled fs-5">
-              <li>🔸 40% — Pre-sale</li>
-              <li>🔸 20% — Liquidity Pool</li>
-              <li>🔸 15% — Marketing & Partnerships</li>
-              <li>🔸 10% — Team (Locked)</li>
-              <li>🔸 10% — CEX Listings</li>
-              <li>🔸 5% — Community Rewards</li>
-            </ul>
-
-            <h4 class="mt-4 mb-3">Token Info</h4>
-            <ul class="list-unstyled fs-5">
-              <li>🪙 Token Name: XcelCoin</li>
-              <li>🔢 Total Supply: 100,000,000</li>
-              <li>🔗 Blockchain: Solana</li>
-              <li>🆔 Token Symbol: XCEL</li>
-            </ul>
-          </div>
+        <div class="mt-4">
+          <a href="index.html" class="btn btn-dark">⬅️ Back to Home</a>
         </div>
       </div>
-
-      <a href="index.html" class="btn btn-dark mt-5">⬅️ Back to Home</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

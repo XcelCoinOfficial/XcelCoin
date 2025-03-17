@@ -170,3 +170,13 @@ footer a:hover {
   transform: scale(1.02);
   box-shadow: 0 0 20px rgba(255, 193, 7, 0.3);
 }
+.tokenomics-card {
+  background: #fffefc;
+  border-radius: 20px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-in-out;
+}
+.tokenomics-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.2);
+}

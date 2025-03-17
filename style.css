@@ -126,3 +126,24 @@ footer a:hover {
   opacity: 0;
   transform: translateY(30px);
 }
+.timeline {
+  position: relative;
+  padding-left: 20px;
+  border-left: 4px solid #ffce00;
+}
+.timeline-item {
+  margin-bottom: 30px;
+  position: relative;
+}
+.timeline-item h5 {
+  font-weight: bold;
+  color: #222;
+}
+.timeline-item::before {
+  content: "●";
+  position: absolute;
+  left: -12px;
+  top: 0;
+  color: #ffce00;
+  font-size: 20px;
+}

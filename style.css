@@ -1,100 +1,55 @@
 body {
   margin: 0;
-  font-family: 'Fredoka One', cursive;
-  background-color: #fffbea;
-  color: #333;
-  text-align: center;
+  padding: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-image: url('A_colorful_and_cartoon-style_cryptocurrency_pre-sa.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: #fff;
 }
 
 .hero {
-  background-color: #ffe066;
-  padding: 60px 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-.btn-primary {
-  display: inline-block;
-  background: #ff4081;
-  color: white;
-  padding: 14px 28px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  border-radius: 12px;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
-
-.btn-primary:hover {
-  background: #e73370;
-}
-
-.features {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
-  padding: 40px 20px;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  backdrop-filter: brightness(0.9) blur(2px);
 }
 
-.feature-card {
-  background: white;
+.content {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 40px;
   border-radius: 20px;
-  padding: 20px;
-  width: 280px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
 
-.feature-card img {
-  width: 60px;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-.roadmap, .tokenomics {
-  padding: 40px 20px;
-  background: #ffffcc;
-  margin-top: 40px;
-  border-radius: 20px;
-  width: 90%;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.roadmap h2, .tokenomics h2 {
-  font-size: 2rem;
+h1 {
+  font-size: 3rem;
   margin-bottom: 20px;
+  text-shadow: 2px 2px #000;
 }
 
-.roadmap ul, .tokenomics ul {
-  list-style: none;
-  padding: 0;
-  font-size: 1.1rem;
+p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px #000;
 }
 
-.roadmap ul li, .tokenomics ul li {
-  margin-bottom: 10px;
+.btn {
+  background-color: #ffdd00;
+  color: #000;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+  transition: all 0.3s ease;
 }
 
-.token-chart img {
-  width: 100%;
-  max-width: 400px;
-  margin-bottom: 20px;
-}
-
-footer {
-  margin-top: 60px;
-  padding: 20px;
-  background-color: #f8f8f8;
-  font-size: 0.9rem;
+.btn:hover {
+  background-color: #ffc400;
+  transform: scale(1.05);
 }

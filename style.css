@@ -1,108 +1,119 @@
+/* XcelCoin - Custom Styles */
+
 body {
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  font-family: 'Luckiest Guy', cursive;
-  background-image: url('bg-cartoon.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  color: #fff;
+  padding: 0;
+  background-color: #f9f9f9;
 }
 
-header {
-  background: rgba(0,0,0,0.6);
-  text-align: center;
-  padding: 80px 20px;
+.navbar {
+  background-color: #2c3e50;
 }
 
-header h1 {
-  font-size: 60px;
-  margin: 0;
-  color: #ffeb3b;
-}
-
-header p {
+.navbar-brand {
+  font-weight: bold;
   font-size: 24px;
-  margin: 10px 0 30px;
+  color: #ffc107 !important;
 }
 
-.btn {
-  display: inline-block;
-  background-color: #ff4081;
-  padding: 15px 30px;
-  font-size: 20px;
-  border: none;
-  border-radius: 10px;
+.navbar-nav .nav-link {
+  color: white !important;
+  font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffc107 !important;
+}
+
+.hero-section {
+  background: url('images/bg-cartoon.jpg') no-repeat center center;
+  background-size: cover;
+  height: 100vh;
   color: white;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background-color: #e91e63;
-}
-
-.features {
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 40px;
-  padding: 50px 20px;
-  flex-wrap: wrap;
-}
-
-.feature {
-  background: rgba(0,0,0,0.6);
-  padding: 30px;
-  border-radius: 20px;
-  width: 280px;
   text-align: center;
+  text-shadow: 2px 2px 6px #000;
+  padding: 40px;
 }
 
-.feature img {
-  width: 70px;
-  height: 70px;
+.hero-section h1 {
+  font-size: 48px;
+  font-weight: 800;
   margin-bottom: 20px;
 }
 
-.feature h3 {
-  color: #ffeb3b;
-  font-size: 24px;
-  margin-bottom: 10px;
+.hero-section p {
+  font-size: 20px;
+  max-width: 700px;
+  margin: auto;
 }
 
-.tokenomics {
+.btn-primary {
+  background-color: #ffc107;
+  border: none;
+  color: #111;
+  font-weight: bold;
+  padding: 10px 25px;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #e0a800;
+  color: #fff;
+}
+
+.feature-card {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  padding: 25px;
   text-align: center;
-  padding: 60px 20px;
-  background-color: rgba(0,0,0,0.7);
+  transition: transform 0.3s;
 }
 
-.tokenomics img {
-  width: 80%;
-  max-width: 500px;
-  margin-top: 20px;
+.feature-card:hover {
+  transform: translateY(-8px);
 }
 
-.section-title {
-  font-size: 40px;
-  color: #ffeb3b;
-}
-
-.presale {
-  text-align: center;
-  padding: 60px 20px;
+.feature-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
 }
 
 footer {
+  background-color: #2c3e50;
+  color: white;
   text-align: center;
-  padding: 30px;
-  background-color: rgba(0,0,0,0.7);
+  padding: 30px 0;
 }
 
-/* MOBİL UYUMLU */
+footer a {
+  color: #ffc107;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 768px) {
-  header h1 { font-size: 36px; }
-  header p { font-size: 18px; }
-  .feature { width: 90%; margin-bottom: 20px; }
-  .features { flex-direction: column; align-items: center; }
-  .section-title { font-size: 28px; }
-  .btn { font-size: 18px; padding: 12px 24px; }
+  .hero-section h1 {
+    font-size: 36px;
+  }
+
+  .hero-section p {
+    font-size: 18px;
+  }
+
+  .btn-primary {
+    padding: 8px 20px;
+    font-size: 16px;
+  }
 }

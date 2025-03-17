@@ -51,3 +51,21 @@ if (countdownElement) {
     `;
   }, 1000);
 }
+// Buy form simulation
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('buyForm');
+  const message = document.getElementById('buyMessage');
+
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const wallet = document.getElementById('wallet').value;
+      const amount = document.getElementById('amount').value;
+
+      if (wallet && amount) {
+        message.textContent = `✅ Thank you! Your purchase of ${amount} XcelCoin has been submitted.`;
+        form.reset();
+      }
+    });
+  }
+});

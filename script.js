@@ -1,3 +1,16 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const fadeElements = document.querySelectorAll(".feature-card, .roadmap li, .token-chart img");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("fade-in");
+      }
+    });
+  }, { threshold: 0.3 });
+
+  fadeElements.forEach(el => observer.observe(el));
+});
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener("click", function (e) {

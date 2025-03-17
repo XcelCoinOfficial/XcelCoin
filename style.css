@@ -1,113 +1,138 @@
-/* ==== XcelCoin Simpsons-Style CSS ==== */
-
+/* === General Styles === */
 body {
   margin: 0;
-  padding: 0;
-  background: url("A_colorful_and_fun_cartoon-style_background_image_.png") no-repeat center center fixed;
-  background-size: cover;
-  font-family: 'Comic Sans MS', 'Fredoka', cursive, sans-serif;
-  color: #222;
+  font-family: 'Fredoka One', cursive;
+  background: linear-gradient(to bottom, #fff8d2, #ffe27a);
+  color: #333;
+  overflow-x: hidden;
 }
 
-/* General Text Styling */
-h1, h2, h3, p {
+/* === Container === */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
   text-align: center;
-  color: #222;
 }
 
-/* Header Box */
-.header {
-  background-color: rgba(255, 255, 200, 0.9);
-  border-radius: 2rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  padding: 2rem;
-  max-width: 800px;
-  margin: 2rem auto;
+/* === Header / Hero Section === */
+.hero {
+  background-color: #ffcd4b;
+  padding: 80px 20px;
+  border-bottom: 4px solid #ffaa00;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.header h1 {
+.hero h1 {
   font-size: 3rem;
-  font-weight: bold;
-  color: #ffcc00;
-  text-shadow: 2px 2px #000;
+  margin-bottom: 20px;
+  color: #2b2b2b;
 }
 
-.header p {
-  font-size: 1.3rem;
-}
-
-/* BUY NOW Button */
-.header a {
-  display: inline-block;
-  margin-top: 1rem;
-  background-color: #ffcc00;
-  color: #000;
-  font-weight: bold;
-  padding: 1rem 2rem;
-  border-radius: 2rem;
-  text-decoration: none;
+.hero p {
   font-size: 1.2rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: 0.3s;
+  margin-bottom: 30px;
+  color: #444;
 }
-.header a:hover {
-  background-color: #ffe14f;
+
+.btn-primary {
+  display: inline-block;
+  background-color: #ff7300;
+  color: #fff;
+  padding: 14px 28px;
+  font-size: 1rem;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-primary:hover {
+  background-color: #ff5500;
   transform: scale(1.05);
 }
 
-/* Feature Cards */
+/* === Features Section === */
 .features {
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
-  justify-content: center;
-  margin: 2rem;
-  gap: 2rem;
+  padding: 60px 20px;
+  background: #fff8d2;
 }
 
 .feature-card {
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 1.5rem;
-  padding: 1.5rem;
-  width: 300px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-  text-align: center;
+  width: 280px;
+  margin: 20px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
+
 .feature-card:hover {
-  transform: scale(1.05);
+  transform: translateY(-10px);
 }
 
 .feature-card img {
-  width: 60px;
-  margin-bottom: 1rem;
+  width: 80px;
+  margin-bottom: 20px;
 }
 
-.feature-card h3 {
-  font-size: 1.5rem;
-  color: #000;
-}
-
-.feature-card p {
-  font-size: 1rem;
-  color: #333;
-}
-
-/* Roadmap */
+/* === Roadmap Section === */
 .roadmap {
-  background-color: rgba(255, 255, 200, 0.9);
-  border-radius: 2rem;
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 2rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  padding: 60px 20px;
+  background-color: #ffefb0;
 }
 
 .roadmap h2 {
-  font-size: 2rem;
-  color: #ffcc00;
-  text-shadow: 1px 1px #000;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
 }
 
 .roadmap ul {
   list-style: none;
-  padding: 
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+.roadmap ul li {
+  margin: 10px 0;
+}
+
+/* === Tokenomics Section === */
+.tokenomics {
+  padding: 60px 20px;
+  background: #fff8d2;
+}
+
+.tokenomics h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+}
+
+.tokenomics .token-chart img {
+  width: 300px;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.tokenomics ul {
+  list-style: none;
+  font-size: 1.2rem;
+  padding: 0;
+}
+
+.tokenomics ul li {
+  margin: 10px 0;
+}
+
+/* === Footer === */
+footer {
+  background-color: #ffcd4b;
+  padding: 30px;
+  text-align: center;
+  font-size: 1rem;
+  border-top: 3px solid #ffaa00;
+}

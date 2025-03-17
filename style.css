@@ -147,3 +147,16 @@ footer a:hover {
   color: #ffce00;
   font-size: 20px;
 }
+.accordion-button {
+  font-weight: bold;
+  background-color: #fff8dc;
+  color: #222;
+  border: none;
+  transition: all 0.3s ease;
+}
+.accordion-button:focus {
+  box-shadow: none;
+}
+.accordion-body {
+  background-color: #fffbe6;
+}

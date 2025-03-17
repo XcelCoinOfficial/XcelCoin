@@ -1,124 +1,108 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Comic Sans MS', cursive, sans-serif;
-}
-
 body {
-  background: url('bg-cartoon.jpg') no-repeat center center fixed;
+  margin: 0;
+  font-family: 'Luckiest Guy', cursive;
+  background-image: url('bg-cartoon.jpg');
   background-size: cover;
-  color: #1a1a1a;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
 }
 
-.container {
+header {
+  background: rgba(0,0,0,0.6);
   text-align: center;
   padding: 80px 20px;
 }
 
-h1 {
-  font-size: 48px;
-  color: #000;
-  margin-bottom: 10px;
+header h1 {
+  font-size: 60px;
+  margin: 0;
+  color: #ffeb3b;
 }
 
-.subtitle {
-  font-size: 20px;
-  color: #ffffff;
-  text-shadow: 1px 1px 2px #000;
-  margin-bottom: 30px;
+header p {
+  font-size: 24px;
+  margin: 10px 0 30px;
 }
 
-.buy-button {
-  background: #FFD700;
-  color: #000;
-  padding: 15px 40px;
+.btn {
+  display: inline-block;
+  background-color: #ff4081;
+  padding: 15px 30px;
   font-size: 20px;
-  font-weight: bold;
-  border-radius: 40px;
   border: none;
-  cursor: pointer;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
-.buy-button:hover {
-  background: #FFC300;
-  transform: scale(1.05);
+.btn:hover {
+  background-color: #e91e63;
 }
 
 .features {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  margin-top: 60px;
-  gap: 30px;
+  gap: 40px;
+  padding: 50px 20px;
+  flex-wrap: wrap;
 }
 
-.feature-box {
-  background: rgba(255, 255, 255, 0.85);
-  padding: 25px;
+.feature {
+  background: rgba(0,0,0,0.6);
+  padding: 30px;
   border-radius: 20px;
   width: 280px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   text-align: center;
-  transition: transform 0.3s ease;
 }
 
-.feature-box:hover {
-  transform: translateY(-8px);
+.feature img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 20px;
 }
 
-.feature-box img {
-  width: 60px;
-  margin-bottom: 15px;
-}
-
-.feature-title {
-  font-size: 22px;
-  font-weight: bold;
+.feature h3 {
+  color: #ffeb3b;
+  font-size: 24px;
   margin-bottom: 10px;
 }
 
-.feature-desc {
-  font-size: 16px;
-  color: #333;
+.tokenomics {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: rgba(0,0,0,0.7);
 }
 
-.roadmap {
-  background: #ffffff;
-  margin-top: 60px;
-  padding: 40px 20px;
-  border-radius: 30px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+.tokenomics img {
+  width: 80%;
+  max-width: 500px;
+  margin-top: 20px;
 }
 
-.roadmap h2 {
-  font-size: 36px;
-  margin-bottom: 30px;
-  color: #000;
+.section-title {
+  font-size: 40px;
+  color: #ffeb3b;
 }
 
-.roadmap ul {
-  list-style: none;
-  font-size: 18px;
-  line-height: 2;
-  color: #333;
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.roadmap ul li {
-  margin-bottom: 15px;
+.presale {
+  text-align: center;
+  padding: 60px 20px;
 }
 
 footer {
   text-align: center;
-  padding: 20px;
-  background: rgba(255,255,255,0.9);
-  margin-top: 40px;
-  font-size: 16px;
-  border-top: 1px solid #ccc;
+  padding: 30px;
+  background-color: rgba(0,0,0,0.7);
+}
+
+/* MOBİL UYUMLU */
+@media (max-width: 768px) {
+  header h1 { font-size: 36px; }
+  header p { font-size: 18px; }
+  .feature { width: 90%; margin-bottom: 20px; }
+  .features { flex-direction: column; align-items: center; }
+  .section-title { font-size: 28px; }
+  .btn { font-size: 18px; padding: 12px 24px; }
 }

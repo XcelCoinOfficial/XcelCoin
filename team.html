@@ -2,42 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>XcelCoin Team</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .team-section {
+      background: #f9f9f9;
+      padding: 4rem 1rem;
+    }
+    .team-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+      transition: transform 0.3s ease;
+    }
+    .team-card:hover {
+      transform: scale(1.05);
+    }
+    .team-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+    .team-name {
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
 
-  <section class="py-5">
-    <div class="container">
-      <h2 class="text-center mb-4">🧠 Meet the XcelCoin Team</h2>
-      <div class="row text-center">
-        <div class="col-md-4 mb-4">
-          <div class="card h-100 shadow-sm p-3">
-            <img src="images/team1.png" alt="Team Member 1" class="img-fluid rounded-circle mb-3" style="width: 120px; height: 120px;">
-            <h5>Alex Ryder</h5>
-            <p>Founder & CEO</p>
-          </div>
+<section class="team-section text-center">
+  <div class="container">
+    <h2 class="mb-4">🧠 Meet the XcelCoin Team</h2>
+    <p class="lead mb-5">The visionaries behind the revolution of digital finance.</p>
+
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <div class="team-card">
+          <img src="https://via.placeholder.com/120" alt="Founder" class="team-img">
+          <h4 class="team-name">Alex Crypto</h4>
+          <p class="text-muted">Founder & CEO</p>
+          <p>Strategist, innovator, and Web3 visionary shaping the future of XcelCoin.</p>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="card h-100 shadow-sm p-3">
-            <img src="images/team2.png" alt="Team Member 2" class="img-fluid rounded-circle mb-3" style="width: 120px; height: 120px;">
-            <h5>Maria Chen</h5>
-            <p>Lead Developer</p>
-          </div>
+      </div>
+      <div class="col-md-4">
+        <div class="team-card">
+          <img src="https://via.placeholder.com/120" alt="Developer" class="team-img">
+          <h4 class="team-name">Luna Dev</h4>
+          <p class="text-muted">Lead Blockchain Developer</p>
+          <p>Mastermind behind the smart contract infrastructure on Solana.</p>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="card h-100 shadow-sm p-3">
-            <img src="images/team3.png" alt="Team Member 3" class="img-fluid rounded-circle mb-3" style="width: 120px; height: 120px;">
-            <h5>Jake Wilson</h5>
-            <p>Marketing Head</p>
-          </div>
+      </div>
+      <div class="col-md-4">
+        <div class="team-card">
+          <img src="https://via.placeholder.com/120" alt="Marketing" class="team-img">
+          <h4 class="team-name">Neo Sparks</h4>
+          <p class="text-muted">Marketing & Growth</p>
+          <p>Crypto marketing expert bringing global attention to XcelCoin.</p>
         </div>
       </div>
     </div>
-  </section>
 
-  <script src="script.js"></script>
+    <div class="mt-4">
+      <a href="index.html" class="btn btn-dark">⬅️ Back to Home</a>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

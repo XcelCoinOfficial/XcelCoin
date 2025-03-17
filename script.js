@@ -1,71 +1,44 @@
-// XcelCoin - Custom Script
-
-// Smooth scroll for navbar links
-document.querySelectorAll('.nav-link').forEach(link => {
-  link.addEventListener('click', function(e) {
+// Smooth Scroll for Anchor Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
     const target = document.querySelector(this.getAttribute('href'));
     if (target) {
-      e.preventDefault();
       target.scrollIntoView({ behavior: 'smooth' });
     }
   });
 });
 
-// Scroll reveal effect for features
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('reveal');
-    }
-  });
-}, {
-  threshold: 0.1
-});
+// Countdown Timer (Optional Section)
+const countdownDate = new Date("2025-04-01T00:00:00").getTime();
 
-document.querySelectorAll('.feature-card').forEach(card => {
-  observer.observe(card);
-});
+const timerFunction = setInterval(function () {
+  const now = new Date().getTime();
+  const distance = countdownDate - now;
 
-// Countdown timer (optional use for pre-sale)
-const countdownElement = document.getElementById("countdown");
-if (countdownElement) {
-  const targetDate = new Date("2025-04-01T00:00:00").getTime(); // Set your pre-sale end date here
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  const countdownInterval = setInterval(() => {
-    const now = new Date().getTime();
-    const distance = targetDate - now;
-
-    if (distance < 0) {
-      clearInterval(countdownInterval);
-      countdownElement.innerHTML = "Pre-Sale Ended!";
-      return;
-    }
-
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    countdownElement.innerHTML = `
-      ${days}d ${hours}h ${minutes}m ${seconds}s
-    `;
-  }, 1000);
-}
-// Buy form simulation
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('buyForm');
-  const message = document.getElementById('buyMessage');
-
-  if (form) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const wallet = document.getElementById('wallet').value;
-      const amount = document.getElementById('amount').value;
-
-      if (wallet && amount) {
-        message.textContent = `✅ Thank you! Your purchase of ${amount} XcelCoin has been submitted.`;
-        form.reset();
-      }
-    });
+  const timerElement = document.getElementById("countdown");
+  if (timerElement) {
+    timerElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
   }
-});
+
+  if (distance < 0) {
+    clearInterval(timerFunction);
+    if (timerElement) {
+      timerElement.innerHTML = "Presale Ended!";
+    }
+  }
+}, 1000);
+
+// Buy Now Button Action (Mock Example)
+const buyBtn = document.getElementById("buyNowBtn");
+if (buyBtn) {
+  buyBtn.addEventListener("click", () => {
+    alert("Redirecting to the Presale Page...");
+    window.location.href = "#buy-section"; // You can change this to a real presale page
+  });
+}

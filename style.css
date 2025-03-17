@@ -1,51 +1,129 @@
+/* Font */
 body {
-  font-family: 'Fredoka One', cursive;
   margin: 0;
   padding: 0;
-  background-color: #fff9e6;
+  font-family: 'Fredoka One', cursive;
+  background-image: url('images/bg-cartoon.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: #333;
 }
 
+/* Hero Section */
 .hero {
-  background: url('images/bg-cartoon.jpg') no-repeat center center/cover;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-color: #fbd34c;
-  text-shadow: 2px 2px #00000050;
+  padding: 100px 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-bottom: 5px dashed #FFD700;
 }
 
-h1, h2, h3 {
-  font-weight: bold;
-  color: #222;
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #ff6600;
 }
 
-.btn-warning {
+.hero p {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+.btn-primary {
   background-color: #ffcc00;
-  border: none;
   color: #000;
-  font-weight: bold;
-  padding: 12px 30px;
+  padding: 15px 30px;
+  font-size: 18px;
   border-radius: 30px;
-  box-shadow: 0 0 10px #00000030;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-.features img {
-  border-radius: 50%;
-  background-color: #fff3b0;
-  padding: 10px;
-  box-shadow: 0 4px 8px #00000020;
+.btn-primary:hover {
+  background-color: #ffaa00;
 }
 
-.roadmap ul li,
+/* Features Section */
+.features {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 60px 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.feature-card {
+  width: 250px;
+  text-align: center;
+}
+
+.feature-card img {
+  width: 100px;
+  height: 100px;
+}
+
+.feature-card h3 {
+  font-size: 24px;
+  margin-top: 15px;
+  color: #ff6600;
+}
+
+/* Roadmap Section */
+.roadmap {
+  padding: 60px 20px;
+  background-color: #fff8e1;
+  text-align: center;
+}
+
+.roadmap h2 {
+  font-size: 36px;
+  color: #ff9900;
+}
+
+.roadmap ul {
+  list-style: none;
+  padding: 0;
+  font-size: 20px;
+}
+
+.roadmap ul li {
+  margin: 15px 0;
+}
+
+/* Tokenomics Section */
+.tokenomics {
+  padding: 60px 20px;
+  background-color: rgba(255,255,255,0.95);
+  text-align: center;
+}
+
+.tokenomics h2 {
+  font-size: 36px;
+  color: #cc3300;
+}
+
+.token-chart img {
+  width: 300px;
+  margin: 30px 0;
+}
+
+.tokenomics ul {
+  list-style: none;
+  padding: 0;
+  font-size: 20px;
+}
+
 .tokenomics ul li {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 
+/* Footer */
 footer {
   background-color: #222;
   color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
 }

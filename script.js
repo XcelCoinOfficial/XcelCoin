@@ -1,16 +1,30 @@
-// Welcome popup for fun effect
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    alert("🚀 Welcome to the XcelCoin Pre-Sale!\nSecure your spot in the future of crypto!");
-  }, 1000);
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute("href"));
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  });
 });
 
-// Simple button click action (can be replaced with actual purchase flow later)
-document.addEventListener('DOMContentLoaded', () => {
-  const buyButton = document.querySelector('.btn-primary');
-  if (buyButton) {
-    buyButton.addEventListener('click', () => {
-      alert("💸 Purchase process will be activated soon!\nStay tuned for updates.");
-    });
-  }
+// Simple animation on scroll (fade-in effect)
+const faders = document.querySelectorAll(".feature-card, .roadmap li, .token-chart img");
+
+const appearOptions = {
+  threshold: 0.2,
+  rootMargin: "0px 0px -100px 0px"
+};
+
+const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add("fade-in");
+    appearOnScroll.unobserve(entry.target);
+  });
+}, appearOptions);
+
+faders.forEach(fader => {
+  appearOnScroll.observe(fader);
 });

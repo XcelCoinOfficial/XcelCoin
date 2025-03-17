@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>XcelCoin - Fun & Fast Presale</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -18,94 +19,98 @@
       height: 100vh;
       color: white;
       text-shadow: 2px 2px 6px #000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
 
-    .feature-icon {
-      width: 80px;
+    .hero-section h1 {
+      font-size: 3rem;
       margin-bottom: 20px;
     }
 
-    .feature-card {
-      background-color: rgba(255, 255, 255, 0.9);
+    .btn-buy {
+      background-color: #ffcc00;
+      border: none;
+      padding: 12px 30px;
+      font-size: 18px;
+      border-radius: 50px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+
+    .btn-buy:hover {
+      background-color: #ffaa00;
+    }
+
+    .countdown {
+      font-size: 24px;
+      margin-top: 20px;
+    }
+
+    .progress-container {
+      width: 80%;
+      max-width: 600px;
+      margin: 40px auto 0;
+    }
+
+    .progress {
+      height: 25px;
       border-radius: 20px;
-      padding: 30px;
-      text-align: center;
-      box-shadow: 0 0 15px rgba(0,0,0,0.2);
-      margin-bottom: 30px;
+      overflow: hidden;
     }
 
-    .tokenomics-section {
-      background-color: #fffbe6;
-      padding: 80px 0;
-    }
-
-    .tokenomics-section h2 {
+    .progress-bar {
+      background-color: #ffcc00;
       font-weight: bold;
-      margin-bottom: 30px;
-    }
-
-    footer {
-      background-color: #222;
-      color: #fff;
-      padding: 30px 0;
-      text-align: center;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
 
-  <!-- ✅ HERO SECTION -->
-  <section class="hero-section d-flex align-items-center justify-content-center text-center">
-    <div class="container">
-      <h1 class="display-3 fw-bold">Welcome to XcelCoin 🚀</h1>
-      <p class="lead mt-3 mb-4">The Funniest and Fastest Community-Powered Token in the Galaxy!</p>
-      <a href="#presale" class="btn btn-warning btn-lg m-2">Join Presale</a>
-      <a href="#tokenomics" class="btn btn-outline-light btn-lg m-2">View Tokenomics</a>
-    </div>
-  </section>
+  <div class="hero-section">
+    <h1>🚀 Welcome to XcelCoin Presale!</h1>
+    <p>Join the most fun and exciting crypto project of 2025!</p>
+    <button class="btn btn-buy mt-3">💸 Buy Now</button>
 
-  <!-- ✅ FEATURES -->
-  <section class="container py-5" id="features">
-    <div class="row text-center">
-      <div class="col-md-4">
-        <div class="feature-card">
-          <img src="images/token.png" alt="Low Supply" class="feature-icon">
-          <h4>Low Supply</h4>
-          <p>Limited token supply means higher demand and bigger potential gains!</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="feature-card">
-          <img src="images/speed.png" alt="Super Fast" class="feature-icon">
-          <h4>Super Fast</h4>
-          <p>Lightning-fast transactions powered by the Solana blockchain.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="feature-card">
-          <img src="images/community.png" alt="Community Powered" class="feature-icon">
-          <h4>Community Powered</h4>
-          <p>Built by the community, for the community. Let's grow together!</p>
-        </div>
+    <div class="countdown" id="countdown">
+      Presale ends in: <span id="timer">Loading...</span>
+    </div>
+
+    <div class="progress-container">
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" id="progressBar" style="width: 60%;">60% Raised</div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- ✅ TOKENOMICS -->
-  <section class="tokenomics-section text-center" id="tokenomics">
-    <div class="container">
-      <h2 class="display-5">📊 Tokenomics</h2>
-      <p class="lead">Transparent, fair, and designed for success!</p>
-      <img src="images/tokenomics.png" alt="Tokenomics" class="img-fluid mt-4" style="max-width: 600px;">
-    </div>
-  </section>
+  <script>
+    // Countdown Timer Script
+    const endDate = new Date("2025-04-15T23:59:59").getTime();
 
-  <!-- ✅ FOOTER -->
-  <footer>
-    <div class="container">
-      <p>XcelCoin © 2025. All rights reserved.</p>
-    </div>
-  </footer>
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = endDate - now;
+
+      if (distance < 0) {
+        document.getElementById("timer").innerHTML = "Presale Ended";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
 
 </body>
 </html>

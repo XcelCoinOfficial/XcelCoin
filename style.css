@@ -1,182 +1,87 @@
-/* XcelCoin - Custom Styles */
-
+/* General Styles */
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fef7e0;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
+  overflow-x: hidden;
+  color: #333;
 }
 
-.navbar {
-  background-color: #2c3e50;
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
 }
 
-.navbar-brand {
-  font-weight: bold;
-  font-size: 24px;
-  color: #ffc107 !important;
+a {
+  text-decoration: none;
 }
 
-.navbar-nav .nav-link {
-  color: white !important;
-  font-weight: 500;
-}
-
-.navbar-nav .nav-link:hover {
-  color: #ffc107 !important;
-}
-
-.hero-section {
-  background: url('images/bg-cartoon.jpg') no-repeat center center;
-  background-size: cover;
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #ffde59, #ff914d);
   height: 100vh;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  text-shadow: 2px 2px 6px #000;
-  padding: 40px;
+  padding: 60px 20px;
+  background-size: cover;
+  background-position: center;
 }
 
-.hero-section h1 {
-  font-size: 48px;
-  font-weight: 800;
-  margin-bottom: 20px;
+/* Features Section */
+.features {
+  background-color: #fff2cc;
 }
 
-.hero-section p {
-  font-size: 20px;
-  max-width: 700px;
-  margin: auto;
-}
-
-.btn-primary {
-  background-color: #ffc107;
-  border: none;
-  color: #111;
-  font-weight: bold;
-  padding: 10px 25px;
-  border-radius: 30px;
-  transition: 0.3s;
-}
-
-.btn-primary:hover {
-  background-color: #e0a800;
-  color: #fff;
-}
-
-.feature-card {
-  background-color: white;
-  border-radius: 20px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  padding: 25px;
-  text-align: center;
-  transition: transform 0.3s;
-}
-
-.feature-card:hover {
-  transform: translateY(-8px);
+.features h2 {
+  color: #222;
 }
 
 .feature-icon {
   width: 80px;
-  height: 80px;
-  object-fit: contain;
-  margin-bottom: 15px;
+  height: auto;
 }
 
-footer {
-  background-color: #2c3e50;
-  color: white;
-  text-align: center;
-  padding: 30px 0;
+/* Buy Section */
+#buy-section {
+  background: #fff8e1;
 }
 
-footer a {
-  color: #ffc107;
-  text-decoration: none;
-  margin: 0 10px;
+#buy-section .card {
+  border-radius: 20px;
+  background-color: #ffffff;
 }
 
-footer a:hover {
-  text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-  .hero-section h1 {
-    font-size: 36px;
-  }
-
-  .hero-section p {
-    font-size: 18px;
-  }
-
-  .btn-primary {
-    padding: 8px 20px;
-    font-size: 16px;
-  }
-}
-.reveal {
-  opacity: 1;
-  transform: translateY(0);
-  transition: all 0.6s ease-in-out;
-}
-.feature-card {
-  opacity: 0;
-  transform: translateY(30px);
-}
-.timeline {
-  position: relative;
-  padding-left: 20px;
-  border-left: 4px solid #ffce00;
-}
-.timeline-item {
-  margin-bottom: 30px;
-  position: relative;
-}
-.timeline-item h5 {
-  font-weight: bold;
-  color: #222;
-}
-.timeline-item::before {
-  content: "●";
-  position: absolute;
-  left: -12px;
-  top: 0;
-  color: #ffce00;
-  font-size: 20px;
-}
-.accordion-button {
-  font-weight: bold;
-  background-color: #fff8dc;
-  color: #222;
+#buy-section .btn {
+  background-color: #ffb703;
   border: none;
-  transition: all 0.3s ease;
+  font-weight: 700;
 }
-.accordion-button:focus {
-  box-shadow: none;
+
+#buy-section .btn:hover {
+  background-color: #ffaa00;
 }
-.accordion-body {
-  background-color: #fffbe6;
+
+/* Tokenomics */
+#tokenomics {
+  background-color: #ffedd8;
 }
-.roadmap-card {
-  border-radius: 20px;
-  background: #fffef7;
-  box-shadow: 0 0 15px rgba(0,0,0,0.08);
-  transition: 0.3s ease-in-out;
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: #fff;
 }
-.roadmap-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 20px rgba(255, 193, 7, 0.3);
+
+footer p {
+  margin: 0;
 }
-.tokenomics-card {
-  background: #fffefc;
-  border-radius: 20px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.1);
-  transition: all 0.3s ease-in-out;
-}
-.tokenomics-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 20px rgba(0, 123, 255, 0.2);
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 100px 20px;
+  }
+
+  .feature-icon {
+    width: 60px;
+  }
 }

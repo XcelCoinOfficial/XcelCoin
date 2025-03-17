@@ -130,3 +130,16 @@ footer {
   color: #fff;
   font-size: 16px;
 }
+/* Fade-in animation */
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.feature-card,
+.roadmap li,
+.token-chart img {
+  opacity: 0;
+  transform: translateY(40px);
+}

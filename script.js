@@ -1,44 +1,27 @@
-// Smooth Scroll for Anchor Links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
-});
+// Countdown Timer
+const countdown = document.getElementById("countdown");
 
-// Countdown Timer (Optional Section)
-const countdownDate = new Date("2025-04-01T00:00:00").getTime();
+// Hedef tarih (örnek: 30 Mart 2025 23:59:59)
+const targetDate = new Date("2025-03-30T23:59:59").getTime();
 
-const timerFunction = setInterval(function () {
+const updateCountdown = () => {
   const now = new Date().getTime();
-  const distance = countdownDate - now;
+  const distance = targetDate - now;
+
+  if (distance < 0) {
+    countdown.innerHTML = "⏰ Presale Sona Erdi!";
+    return;
+  }
 
   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const hours = Math.floor(
+    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  const timerElement = document.getElementById("countdown");
-  if (timerElement) {
-    timerElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-  }
+  countdown.innerHTML = `${days}g ${hours}s ${minutes}d ${seconds}s`;
+};
 
-  if (distance < 0) {
-    clearInterval(timerFunction);
-    if (timerElement) {
-      timerElement.innerHTML = "Presale Ended!";
-    }
-  }
-}, 1000);
-
-// Buy Now Button Action (Mock Example)
-const buyBtn = document.getElementById("buyNowBtn");
-if (buyBtn) {
-  buyBtn.addEventListener("click", () => {
-    alert("Redirecting to the Presale Page...");
-    window.location.href = "#buy-section"; // You can change this to a real presale page
-  });
-}
+setInterval(updateCountdown, 1000);
+updateCountdown();

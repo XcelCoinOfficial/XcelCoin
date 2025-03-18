@@ -3,163 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>XcelCoin - The Funniest Presale!</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&display=swap" rel="stylesheet"/>
-  <style>
-    body {
-      font-family: 'Fredoka', sans-serif;
-      background: linear-gradient(135deg, #fff4e6, #ffe5ec);
-      color: #222;
-      text-align: center;
-      padding: 20px;
-      background-image: url('https://i.imgur.com/fzK9c9v.png');
-      background-repeat: no-repeat;
-      background-position: top right;
-      background-size: 300px;
-    }
-
-    .navbar {
-      background-color: #ff5e5b;
-      padding: 20px;
-      border-radius: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-
-    .navbar h1 {
-      font-size: 38px;
-      font-weight: 700;
-      color: white;
-      text-shadow: 2px 2px #000;
-    }
-
-    .btn-connect {
-      background-color: #ffb703;
-      border: none;
-      padding: 12px 30px;
-      font-size: 20px;
-      font-weight: bold;
-      border-radius: 16px;
-      color: white;
-      transition: all 0.3s ease;
-      margin-top: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-
-    .btn-connect:hover {
-      background-color: #ffaa00;
-    }
-
-    .section-title {
-      font-size: 28px;
-      font-weight: 700;
-      color: #d62828;
-      margin-top: 40px;
-    }
-
-    #countdown {
-      font-size: 30px;
-      font-weight: bold;
-      color: #000;
-      margin-top: 10px;
-    }
-
-    .progress {
-      height: 30px;
-      border-radius: 15px;
-      background-color: #eee;
-      margin-top: 15px;
-    }
-
-    .progress-bar {
-      background-color: #ff006e;
-      font-weight: bold;
-      font-size: 16px;
-    }
-
-    footer {
-      margin-top: 60px;
-      font-size: 16px;
-      color: #444;
-    }
-
-    .social-icons a {
-      margin: 0 12px;
-      font-size: 22px;
-      color: #000;
-      text-decoration: none;
-    }
-
-    .mascot-img {
-      width: 180px;
-      margin: 30px auto;
-      animation: bounce 2s infinite;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
-  </style>
+  <title>XcelCoin Presale 🚀</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script>
 </head>
 <body>
 
-  <div class="navbar">
-    <h1>💥 XcelCoin Presale 💸</h1>
-  </div>
+  <header class="hero-section">
+    <div class="container">
+      <img src="img/xcelcoin-logo.png" alt="XcelCoin Logo" class="logo" />
+      <h1>🚀 XcelCoin Meme Presale Başladı!</h1>
+      <p class="subtitle">En eğlenceli coin burada! Katıl, gül, kazan! 😎</p>
+      <a href="#" class="btn-connect">Cüzdanını Bağla</a>
+    </div>
+  </header>
 
-  <img class="mascot-img" src="https://i.imgur.com/bOJ1XGr.png" alt="Mascot" />
-
-  <button class="btn-connect">🚀 Connect Wallet</button>
-
-  <section class="container mt-5">
-    <h2 class="section-title">⏳ Presale Ends In</h2>
-    <div id="countdown"></div>
+  <section class="countdown-section">
+    <h2>⏳ Presale Bitişine Kalan Süre:</h2>
+    <div id="countdown" class="countdown-timer"></div>
   </section>
 
-  <section class="container mt-5">
-    <h2 class="section-title">🔥 Tokens Sold</h2>
-    <div class="progress">
-      <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 72%">72% Sold</div>
+  <section class="progress-section">
+    <h2>🔥 Satılan Token Miktarı</h2>
+    <div class="progress-bar">
+      <div class="progress-fill" style="width: 65%;">65% Satıldı</div>
     </div>
   </section>
 
-  <section class="container mt-5">
-    <h2 class="section-title">📱 Follow Us</h2>
-    <div class="social-icons">
-      <a href="https://t.me/xcelcoin" target="_blank">📢 Telegram</a>
+  <section class="social-section">
+    <h2>📢 Bizi Takip Et</h2>
+    <div class="social-links">
+      <a href="https://t.me/xcelcoin" target="_blank">📲 Telegram</a>
       <a href="https://twitter.com/xcelcoin" target="_blank">🐦 Twitter</a>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 XcelCoin. All rights reserved.</p>
+    <p>&copy; 2025 XcelCoin. Tüm Hakları Saklıdır.</p>
   </footer>
-
-  <script>
-    const countdownDate = new Date("April 30, 2025 23:59:59").getTime();
-    const countdown = document.getElementById("countdown");
-
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const distance = countdownDate - now;
-
-      if (distance < 0) {
-        countdown.innerHTML = "Presale Ended 🚨";
-        return;
-      }
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-    }
-
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
-  </script>
 
 </body>
 </html>

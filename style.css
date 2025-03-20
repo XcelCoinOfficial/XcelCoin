@@ -1,111 +1,63 @@
-/* Google Fonts */
 body {
-  margin: 0;
-  font-family: 'Nunito', sans-serif;
-  background: linear-gradient(145deg, #fcd34d, #f87171, #60a5fa);
-  color: #222;
-  text-align: center;
-  overflow-x: hidden;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #fff;
+    color: #111;
 }
 
-.logo {
-  width: 150px;
-  margin: 20px auto;
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
 }
 
-.hero-section {
-  background: #fff3cd;
-  padding: 60px 20px;
-  border-bottom: 8px solid #ffc107;
-  border-radius: 0 0 60px 60px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+.hero {
+    background: #f9c400;
+    text-align: center;
+    padding: 100px 20px;
+    color: #000;
 }
 
-.hero-section h1 {
-  font-family: 'Chewy', cursive;
-  font-size: 48px;
-  color: #ff5722;
-  margin-bottom: 10px;
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
 }
 
-.subtitle {
-  font-size: 20px;
-  color: #555;
-  margin-bottom: 30px;
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
 }
 
-.btn-connect {
-  background-color: #ff5722;
-  color: #fff;
-  padding: 16px 32px;
-  font-size: 18px;
-  border: none;
-  border-radius: 40px;
-  text-decoration: none;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-  transition: background 0.3s ease;
+.btn {
+    background: #000;
+    color: #fff;
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
 }
 
-.btn-connect:hover {
-  background-color: #e64a19;
+.about, .tokenomics, .roadmap {
+    background: #f5f5f5;
+    margin-top: 40px;
+    border-radius: 12px;
+    padding: 40px 20px;
 }
 
-.countdown-section,
-.progress-section,
-.social-section {
-  padding: 50px 20px;
-  background: #fff;
-  border-radius: 40px;
-  margin: 30px auto;
-  width: 90%;
-  max-width: 900px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+.about h2, .tokenomics h2, .roadmap h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
 }
 
-.countdown-timer {
-  font-size: 36px;
-  font-weight: bold;
-  color: #ff5722;
-  margin-top: 20px;
-}
-
-.progress-bar {
-  width: 100%;
-  background-color: #eee;
-  border-radius: 30px;
-  overflow: hidden;
-  box-shadow: inset 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.progress-fill {
-  background: linear-gradient(to right, #facc15, #f97316);
-  height: 40px;
-  line-height: 40px;
-  font-weight: bold;
-  color: #fff;
-  text-shadow: 1px 1px 3px #000;
-  border-radius: 30px;
-  transition: width 0.6s ease-in-out;
-}
-
-.social-links a {
-  display: inline-block;
-  margin: 10px 20px;
-  font-size: 18px;
-  color: #ff5722;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.social-links a:hover {
-  text-decoration: underline;
+ul, ol {
+    padding-left: 20px;
 }
 
 footer {
-  margin-top: 60px;
-  padding: 30px;
-  font-size: 14px;
-  color: #fff;
-  background-color: #222;
-  border-radius: 50px 50px 0 0;
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 40px;
 }

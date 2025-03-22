@@ -1,137 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Simpsonomics Pre-Sale</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simpsonomics Token Pre-Sale</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-      background: #fff8e7;
-      color: #333;
+      font-family: 'Comic Neue', cursive;
+      background: #fbe18d;
+      color: #222;
+      overflow-x: hidden;
     }
     header {
       background: #ffcc00;
-      padding: 20px;
+      padding: 1.5rem;
       text-align: center;
-      font-size: 2em;
-      color: #2d2d2d;
+      font-size: 2.5rem;
+      font-weight: bold;
+      border-bottom: 5px solid #333;
     }
-    .countdown {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      font-size: 2em;
-      margin: 20px 0;
+    .timer-section {
+      text-align: center;
+      margin: 2rem auto;
+    }
+    .timer-box {
+      background: #fff;
+      display: inline-block;
+      padding: 1rem 2rem;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      font-size: 2rem;
     }
     .token-info {
-      text-align: center;
-      background: #fff3b0;
-      padding: 30px;
+      background: #ffe;
+      padding: 2rem;
       border-radius: 20px;
-      margin: 20px auto;
-      width: 80%;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      margin: 2rem;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.2);
     }
     .token-info h2 {
-      margin-bottom: 10px;
+      text-align: center;
+      margin-bottom: 1rem;
     }
-    .buy-options {
+    .token-info p {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+    }
+    .buy-section {
       display: flex;
       justify-content: center;
-      gap: 30px;
-      margin-top: 20px;
-      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin: 2rem;
     }
-    .option {
-      background: #ffefc5;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    .buy-box {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 20px;
       text-align: center;
-      width: 250px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.2);
     }
-    .option button {
-      margin-top: 10px;
-      padding: 10px 20px;
+    .buy-box button {
+      background: #ff9800;
       border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
       border-radius: 10px;
-      background: #ff9900;
-      color: white;
       cursor: pointer;
-      font-weight: bold;
+      margin-top: 1rem;
     }
-    footer {
+    .footer {
       text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-      background: #f1f1f1;
+      margin: 3rem auto;
+      font-size: 1rem;
+      color: #555;
     }
   </style>
 </head>
 <body>
   <header>
-    💰 Simpsonomics Token Pre-Sale 💰
+    Simpsonomics Pre-Sale 🚀
   </header>
 
-  <div class="countdown">
-    <div><strong id="days">00</strong><br>Days</div>
-    <div><strong id="hours">00</strong><br>Hours</div>
-    <div><strong id="minutes">00</strong><br>Minutes</div>
-    <div><strong id="seconds">00</strong><br>Seconds</div>
+  <div class="timer-section">
+    <div class="timer-box">
+      ⏳ Pre-Sale Ends In: <span id="countdown">Loading...</span>
+    </div>
   </div>
 
-  <div class="token-info">
-    <h2>💸 Token Price: 0.0012 SOL</h2>
-    <p>Total Supply: 1,000,000,000 SMPX</p>
-    <p>Minimum Purchase: 100 Tokens</p>
-    <p>Buy Now and Join the Simpsonomics Revolution!</p>
-  </div>
+  <section class="token-info">
+    <h2>Token Details</h2>
+    <p>🔸 Token Name: Simpsonomics ($SIMP)</p>
+    <p>🔸 Network: Solana (SOL)</p>
+    <p>🔸 Price: 1 $SIMP = 0.000244 SOL</p>
+    <p>🔸 Total Supply: 1,000,000,000 $SIMP</p>
+    <p>🔸 Presale Supply: 300,000,000 $SIMP</p>
+  </section>
 
-  <div class="buy-options">
-    <div class="option">
+  <section class="buy-section">
+    <div class="buy-box">
       <h3>Buy with SOL</h3>
-      <p>Send to:</p>
-      <code>YOUR_SOLANA_WALLET_ADDRESS</code>
-      <button>Copy Address</button>
+      <p>Wallet: <strong>YOUR-SOL-ADDRESS</strong></p>
+      <button>Buy Now</button>
     </div>
-    <div class="option">
-      <h3>Buy with Crypto</h3>
-      <p>Use your preferred wallet</p>
-      <button>Connect Wallet</button>
+    <div class="buy-box">
+      <h3>Join Telegram</h3>
+      <p>Stay updated with the community!</p>
+      <button onclick="window.open('https://t.me/yourchannel')">Join</button>
     </div>
-    <div class="option">
-      <h3>Join Our Telegram</h3>
-      <p>Stay updated & join the community</p>
-      <button>Join Now</button>
-    </div>
-  </div>
+  </section>
 
-  <footer>
-    &copy; 2025 Simpsonomics Token. All rights reserved.
-  </footer>
+  <div class="footer">
+    © 2025 Simpsonomics. All Rights Reserved.
+  </div>
 
   <script>
-    const countdownDate = new Date("2025-04-01T00:00:00").getTime();
-    const timer = setInterval(function () {
+    const countdown = document.getElementById("countdown");
+    const endDate = new Date("2025-04-15T00:00:00Z").getTime();
+    setInterval(() => {
       const now = new Date().getTime();
-      const distance = countdownDate - now;
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      document.getElementById("days").innerText = days;
-      document.getElementById("hours").innerText = hours;
-      document.getElementById("minutes").innerText = minutes;
-      document.getElementById("seconds").innerText = seconds;
-
-      if (distance < 0) {
-        clearInterval(timer);
-        document.querySelector(".countdown").innerHTML = "🚀 SALE ENDED!";
-      }
+      const distance = endDate - now;
+      const d = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const s = Math.floor((distance % (1000 * 60)) / 1000);
+      countdown.innerText = `${d}d ${h}h ${m}m ${s}s`;
     }, 1000);
   </script>
 </body>

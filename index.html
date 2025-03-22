@@ -1,65 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simpsocoin - Pre-Sale Token</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simpsonomics Pre-Sale</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: #fff8e7;
+      color: #333;
+    }
+    header {
+      background: #ffcc00;
+      padding: 20px;
+      text-align: center;
+      font-size: 2em;
+      color: #2d2d2d;
+    }
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      font-size: 2em;
+      margin: 20px 0;
+    }
+    .token-info {
+      text-align: center;
+      background: #fff3b0;
+      padding: 30px;
+      border-radius: 20px;
+      margin: 20px auto;
+      width: 80%;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    .token-info h2 {
+      margin-bottom: 10px;
+    }
+    .buy-options {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .option {
+      background: #ffefc5;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 250px;
+    }
+    .option button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      background: #ff9900;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      background: #f1f1f1;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    💰 Simpsonomics Token Pre-Sale 💰
+  </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1>Where Crypto Meets Fun!</h1>
-            <p>Join the future of memes and crypto with Simpsocoin – a vibrant, community-driven token.</p>
-            <a href="#presale" class="btn">Join Presale Now</a>
-        </div>
-    </section>
+  <div class="countdown">
+    <div><strong id="days">00</strong><br>Days</div>
+    <div><strong id="hours">00</strong><br>Hours</div>
+    <div><strong id="minutes">00</strong><br>Minutes</div>
+    <div><strong id="seconds">00</strong><br>Seconds</div>
+  </div>
 
-    <!-- About Section -->
-    <section class="about">
-        <div class="container">
-            <h2>Why Simpsocoin?</h2>
-            <p>Inspired by meme culture and powered by Web3 – Simpsocoin is here to empower decentralized finance with humor and innovation.</p>
-        </div>
-    </section>
+  <div class="token-info">
+    <h2>💸 Token Price: 0.0012 SOL</h2>
+    <p>Total Supply: 1,000,000,000 SMPX</p>
+    <p>Minimum Purchase: 100 Tokens</p>
+    <p>Buy Now and Join the Simpsonomics Revolution!</p>
+  </div>
 
-    <!-- Tokenomics Section -->
-    <section class="tokenomics" id="presale">
-        <div class="container">
-            <h2>Tokenomics</h2>
-            <ul>
-                <li>Total Supply: 1,000,000,000</li>
-                <li>Presale: 40%</li>
-                <li>Liquidity: 30%</li>
-                <li>Marketing: 15%</li>
-                <li>Team: 10%</li>
-                <li>Rewards: 5%</li>
-            </ul>
-        </div>
-    </section>
+  <div class="buy-options">
+    <div class="option">
+      <h3>Buy with SOL</h3>
+      <p>Send to:</p>
+      <code>YOUR_SOLANA_WALLET_ADDRESS</code>
+      <button>Copy Address</button>
+    </div>
+    <div class="option">
+      <h3>Buy with Crypto</h3>
+      <p>Use your preferred wallet</p>
+      <button>Connect Wallet</button>
+    </div>
+    <div class="option">
+      <h3>Join Our Telegram</h3>
+      <p>Stay updated & join the community</p>
+      <button>Join Now</button>
+    </div>
+  </div>
 
-    <!-- Roadmap Section -->
-    <section class="roadmap">
-        <div class="container">
-            <h2>Roadmap</h2>
-            <ol>
-                <li>Phase 1: Website Launch & Community Growth</li>
-                <li>Phase 2: Presale & Listings</li>
-                <li>Phase 3: Staking Platform</li>
-                <li>Phase 4: NFT Integration</li>
-                <li>Phase 5: DAO Launch</li>
-            </ol>
-        </div>
-    </section>
+  <footer>
+    &copy; 2025 Simpsonomics Token. All rights reserved.
+  </footer>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>© 2025 Simpsocoin. All Rights Reserved.</p>
-        </div>
-    </footer>
+  <script>
+    const countdownDate = new Date("2025-04-01T00:00:00").getTime();
+    const timer = setInterval(function () {
+      const now = new Date().getTime();
+      const distance = countdownDate - now;
 
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerText = days;
+      document.getElementById("hours").innerText = hours;
+      document.getElementById("minutes").innerText = minutes;
+      document.getElementById("seconds").innerText = seconds;
+
+      if (distance < 0) {
+        clearInterval(timer);
+        document.querySelector(".countdown").innerHTML = "🚀 SALE ENDED!";
+      }
+    }, 1000);
+  </script>
 </body>
 </html>
